@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iris-model
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: iris-model
+  template:
+    metadata:
+      labels:
+        app: iris-model
+    spec:
+      containers:
+      - name: iris-model
+        image: <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/iris-model:latest
+        ports:
+        - containerPort: 5000

@@ -16,4 +16,4 @@ COPY models/ ./models
 EXPOSE 5000
 
 # Run the Flask app
-CMD ["python", "src/app.py"]
+CMD ["python", "app.py"]

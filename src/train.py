@@ -12,7 +12,7 @@ model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
 # Save model
-with open("../models/iris_model.pkl", "wb") as f:
+with open("models/iris_model.pkl", "wb") as f:
     pickle.dump(model, f)
 
 print("Model trained and saved to models/iris_model.pkl")
